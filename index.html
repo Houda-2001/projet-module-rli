@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>CRC calculator</title>
+  </head>
+  <body>
+    <p>
+    </p>
+    <div class="container my-5 bar" >
+      <h1>CRC Calculation</h1>
+    </div>
+    <div class="container">
+      <div class="main">
+        <div class="row  g-2 py-3 mx-5">
+      
+          <label for="val1">Ploynomial binary value </label>
+          <input type="text" id="val1" placeholder="Enter binary value">
+  
+          <label for="val2">binary division</label>
+          <input type="text" id="val2" placeholder="Enter binary value">
+          <div class="text-center" style="margin: 20px">
+          <button  class="houda" onclick="performDivision()">Perform Division</button>
+          </div>
+          <br>
+         
+  
+          <div class="output" id="output"></div>
+          
+      </div>
+
+
+   
+
+
+      </div>
+    </div>
+
+    <p>
+
+    </p>
+    <div class="container my-5 bar">
+      <h1>frame analyzer</h1>
+    </div>
+    <div class="container">
+      <div class="main">
+        
+        <div class="row  g-2 py-3 mx-5">
+        <label for="sof">Start of Frame (SOF):</label>
+        <input type="text" id="sof" placeholder="1 bit" />
+        <label for="id">Identifier (ID):</label>
+        <input type="text" id="id" placeholder="11 bits" />
+        <label for="rtr">Remote Transmission Request (RTR):</label>
+        <input type="text" id="rtr" placeholder="1 bit" />
+        <label for="ctl">Control (CTL):</label>
+        <input type="text" id="ctl" placeholder="1 bit" />
+        <label for="dlc">Data Length Code (DLC):</label>
+        <input type="text" id="dlc" placeholder="4 bits" />
+        <label for="data">Data (Data Field):</label>
+        <input type="text" id="data" placeholder="Data" />
+        <label for="crc">CRC:</label>
+        <input type="text" id="crc" placeholder="16 bits" />
+        <label for="ack">ACK Slot (ACK):</label>
+        <input type="text" id="ack" placeholder="1 bit" />
+        <label for="ackdel">Acknowledge (ACK Delimiter):</label>
+        <input type="text" id="ackdel" placeholder="1 bit" />
+        <label for="eof">End of Frame (EOF):</label>
+        <input type="text" id="eof" placeholder="1111111" />
+        <br />
+        <br />
+        <button onclick="generateFrame()">Afficher la trame CAN</button><br />
+        <br />
+        <label for="val2">Polynôme:</label>
+        <input type="text" id="val2" placeholder="Valeur binaire" />
+        <div id="outputFrame"></div>
+        <br />
+        <label id="hexData"></label>
+        <br />
+        <label id="crcValue"></label>
+        <br />
+        <label id="dlcDecimal"></label>
+        <br />
+        <label id="frameType"></label>
+        <br />
+        <label id="idHex"></label>
+      </div>
+    </div>
+    
+        
+    </div>
+      
+       
+     </div>
+    </div>
+
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  </body>
+</html>
